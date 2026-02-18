@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:       #0a0b0e;
+  --surface:  #111318;
+  --surface2: #191c23;
+  --border1:  #222530;
+  --border2:  #2d3142;
+  --accent:   #3dffc0;
+  --muted:    #5a6070;
+  --danger:   #ff5f70;
+  --warn:     #ffd166;
+  --info:     #56b4ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: #e2e6f0;
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar        { width: 6px; height: 6px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--border2); border-radius: 3px; }
+
+/* Syntax tokens */
+.t-keyword { color: #c792ea; }
+.t-fn      { color: #82aaff; }
+.t-string  { color: #98e4a5; }
+.t-num     { color: #f78c6c; }
+.t-comment { color: var(--muted); font-style: italic; }
+.t-prop    { color: #56b4ff; }
+.t-punct   { color: #637082; }
